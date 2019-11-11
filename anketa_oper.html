@@ -9,7 +9,24 @@
 </head>
 
 <body>
+    <a href="index.html" title="первый вариант кода">
+        <h2>anketa_if - I ВАРИАНТ</h2>
+    </a>
 
+    <script>
+        let surname = prompt('ваша фамилия:');
+        let name = prompt('ваше имя, пожалуйста:');
+        let secondName = prompt('и отчество:');
+        let age = parseInt(prompt('укажите, пожалуйста, возраст:'));
+        let gender = (confirm('"ОК" - ваш пол мужской, "Отмена" - если женский')) ? "мужской" : "женский";
+        let pension = ((gender === "мужской" && age >= 60) || (gender === "женский" && age >= 55)) ? "да" : "нет";
+        alert('ваше ФИО:' + ' ' + surname + ' ' + name + ' ' + secondName +
+            '\nваш возраст в годах:' + ' ' + age +
+            '\nваш возраст в днях:' + ' ' + age * 365 +
+            '\nчерез 5 лет вам будет:' + ' ' + (age + 5) +
+            '\nваш пол:' + ' ' + gender +
+            '\nвы на пенсии:' + ' ' + pension);
+    </script>
 </body>
 
 </html>

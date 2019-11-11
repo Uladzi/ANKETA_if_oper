@@ -2,14 +2,46 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>anketa_if</title>
 </head>
 
 <body>
+    <a href="anketa_oper.html" title="второй вариант кода">
+        <h2>anketa_oper - II ВАРИАНТ</h2>
+    </a>
 
+    <script>
+        let surname = prompt('ваша фамилия:');
+        let name = prompt('ваше имя, пожалуйста:');
+        let secondName = prompt('и отчество:');
+        let age = parseInt(prompt('укажите, пожалуйста, возраст:'));
+        let gender = confirm('"ОК" - ваш пол мужской, "Отмена" - если женский');
+        let pension;
+        if (gender === true) {
+            gender = 'мужской';
+            if (age >= 60) {
+                pension = 'да';
+            } else {
+                pension = 'нет';
+            }
+        } else {
+            gender = 'женский';
+            if (age >= 55) {
+                pension = 'да';
+            } else {
+                pension = 'нет';
+            }
+        }
+        alert('ваше ФИО:' + ' ' + surname + ' ' + name + ' ' + secondName +
+            '\nваш возраст в годах:' + ' ' + age +
+            '\nваш возраст в днях:' + ' ' + age * 365 +
+            '\nчерез 5 лет вам будет:' + ' ' + (age + 5) +
+            '\nваш пол:' + ' ' + gender +
+            '\nвы на пенсии:' + ' ' + pension);
+    </script>
 </body>
 
 </html>
